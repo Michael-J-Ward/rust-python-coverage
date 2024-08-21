@@ -17,12 +17,8 @@ jobs:
         with:
           python-version: "3.10"
           cache: "pip"
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-          profile: minimal
-          components: llvm-tools-preview
+      - name: Rust setup
+        run: rustup toolchain install stable --profile minimal
       - name: Install cargo-llvm-cov
         uses: taiki-e/install-action@cargo-llvm-cov
       - uses: Swatinem/rust-cache@v1
