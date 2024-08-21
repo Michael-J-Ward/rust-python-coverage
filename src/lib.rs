@@ -1,4 +1,3 @@
-
 use pyo3::prelude::*;
 
 /// Returns the sum of two numbers (only Rust)
